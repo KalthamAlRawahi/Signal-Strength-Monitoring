@@ -1,0 +1,14 @@
+from signal import get_signal_strength, signal_status
+from logger import log_data
+
+def run_monitor():
+    strength = get_signal_strength()
+    status = signal_status(strength)
+
+    print("Signal Strength:", strength)
+    print("Status:", status)
+
+    log_data(strength, status)
+
+if __name__ == "__main__":
+    run_monitor()
